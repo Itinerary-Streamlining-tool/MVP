@@ -12,8 +12,10 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-
+        <script src="cities.js"></script>
     <title>itinerary creation</title>
+  
+
 </head>
 <style>
     body {
@@ -124,10 +126,31 @@
                     <div class="form-group">
                         <label for="exampleFormControlSelect2">Select if you want to make this visit activity based or location based </label>
                         <select  class="form-control" id="exampleFormControlSelect2">
-                            <option>Activity based</option>
+                            <option>Activity based </option>
                             <option>Location based</option>
                           
                         </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect2">India has a number of places of tourist interest (You can select one / multiple regions amongst India) </label>
+                        <select multiple class="form-control" id="exampleFormControlSelect2">
+                          <!-- <option>Any places in India</option> -->
+                            <option>Northern India covering J&K, Himachal Pradesh, Punjab, Haryana, Delhi, Uttar Pradesh
+                                and parts of Rajasthan</option>
+                            <option>North Eastern India covering Uttara Khand, Sikkim, Assam, Nagaland, Manipur,
+                                Mizoram, Tirupura, Meghalaya</option>
+                            <option>Eastern India covering Uttar Pradesh, Jharkhand, West Bengal, Bihar, Odisha,
+                                Chhatisgarh</option>
+                            <option>Central India covering Madhya Pradesh and Parts of Maharashtra</option>
+                            <option>Western India covering Gujarat, Parts of Maharashtra and Goa</option>
+                            <option>Southern India covering Telangana, Karnataka, Andhra Pradesh, Kerala and Tamil Nadu,
+                                Andaman Islands</option>
+                                
+                        </select> 
+                        <label class="padding-3" for="exampleFormControlSelect2">You can also select a specific city or union territory to visit if you are short on time.</label>
+                        <select onchange="print_city('state', this.selectedIndex);" id="sts" name ="stt" class="form-control" required></select>
+                        <select id ="state" class="form-control padding-3" required></select>
+                        <script language="javascript">print_state("sts");</script>
                     </div>
                     <h3 class="padding">Thank you this is all the information we need to prepare your itinerary, Please expect an email from us within 3 days.
                         Add itinerary.mysite.com to your email whitelist.
@@ -185,6 +208,7 @@
                     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
                         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
                         crossorigin="anonymous"></script>
+                        
 </body>
 
 </html>
