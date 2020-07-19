@@ -147,10 +147,23 @@
                                 Andaman Islands</option>
                                 
                         </select> 
-                        <label class="padding-3" for="exampleFormControlSelect2">You can also select a specific city or union territory to visit if you are short on time.</label>
+                        <label class="padding-3" for="exampleFormControlSelect2">You can also select a specific city or union territory to visit if you are short on time</label>
                         <select onchange="print_city('state', this.selectedIndex);" id="sts" name ="stt" class="form-control" required></select>
                         <select id ="state" class="form-control padding-3" required></select>
                         <script language="javascript">print_state("sts");</script>
+                        <label class="padding-3" for="exampleFormControlSelect2">India is a great place for various activities(You can select multiple options for activities you prefer for this trip to india)</label>                  
+                        <select multiple class="form-control" id="exampleFormControlSelect2">
+                        <option>Meditation</option>
+                        <option>Yoga</option>
+                        <option>Ayurveda</option>
+                        <option>Naturopathy tourism</option>
+                        <option>Beaches</option>
+                        <option>Deserts</option>
+                        <option>Hills</option>
+                        <option>Historical places</option>
+                        <option>Wild life</option>
+                        </select>
+                        <label class="padding-3" for="exampleFormControlSelect2">If this is too much select standard tourist places, if you wish soo.</label>
                     </div>
                     <h3 class="padding">Thank you this is all the information we need to prepare your itinerary, Please expect an email from us within 3 days.
                         Add itinerary.mysite.com to your email whitelist.
